@@ -1,17 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
 import { ChatRoutingModule } from './chat-routing.module';
+import { ChatInputComponent } from './components/chat-input/chat-input.component';
 import { ChatComponent } from './pages/chat/chat.component';
 
-
 @NgModule({
-  declarations: [
-    ChatComponent
-  ],
-  imports: [
-    CommonModule,
-    ChatRoutingModule
-  ]
+  declarations: [ChatComponent, ChatInputComponent],
+  imports: [CommonModule, ChatRoutingModule, FormsModule],
 })
-export class ChatModule { }
+export class ChatModule {}
