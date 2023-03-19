@@ -1,0 +1,16 @@
+@keyframes animate-flash {
+  0% {
+    opacity: 1;
+    box-shadow: none;
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8);
+  }
+
+  100% {
+    opacity: 1;
+    box-shadow: none;
+  }
+}
