@@ -1,7 +1,7 @@
 <div
   class="flex ml-1 md:w-full md:m-auto md:mb-2 gap-0 md:gap-2 justify-center"
 >
-  <button class="btn relative btn-neutral border-0 md:border">
+  <button class="btn hidden md:block relative btn-neutral border-0 md:border">
     <div class="flex w-full items-center justify-center gap-2">
       <svg
         stroke="currentColor"
@@ -25,7 +25,7 @@
   </button>
 </div>
 <form
-  class="flex flex-col w-full py-2 flex-grow md:py-3 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-cs-dark-500 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]"
+  class="flex flex-col w-full py-2 flex-grow md:py-3 pl-2 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-cs-dark-500 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]"
   (ngSubmit)="onSendClicked(textarea)"
 >
   <textarea
