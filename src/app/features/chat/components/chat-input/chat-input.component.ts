@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./chat-input.component.scss'],
 })
 export class ChatInputComponent {
-  @Output() onNewValue = new EventEmitter<string>();
+  @Output() onChatValue = new EventEmitter<string>();
 
   readonly minHeight = 24;
   readonly maxHeight = 200;
@@ -34,7 +34,7 @@ export class ChatInputComponent {
 
   private sendValue(textarea: HTMLTextAreaElement): void {
     const { style, value } = textarea;
-    this.onNewValue.emit(value);
+    this.onChatValue.emit(value);
     textarea.value = '';
     style.height = `${this.minHeight}px`;
     textarea.focus();
