@@ -1,4 +1,4 @@
-export enum ChatSidebarItemMode {
+export enum SidebarItemMode {
   DEFAULT,
   EDIT,
   SELECTED,
