@@ -24,6 +24,10 @@
     color: theme('colors.cs-dark.500');
     font-size: .875rem;
     line-height: 1.25rem;
+
+    &:hover {
+      background-color: theme('colors.cs-light.800');
+    }
   }
 
   .dark .btn-neutral {
