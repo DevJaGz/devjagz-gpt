@@ -31,12 +31,12 @@
   }
 
   .dark .btn-neutral {
-    background-color: theme('colors.cs-dark.300');
-    border-color: theme('colors.cs-dark.600');
-    color: theme('colors.cs-light.DEFAULT');
+    background-color: theme('colors.cs-dark.300') !important;
+    border-color: theme('colors.cs-dark.600') !important;
+    color: theme('colors.cs-light.DEFAULT') !important;
 
     &:hover {
-      background-color: theme('colors.cs-dark.400');
+      background-color: theme('colors.cs-dark.500') !important;
     }
   }
 }
