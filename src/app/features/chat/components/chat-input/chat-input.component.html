@@ -1,13 +1,13 @@
 <div
   #wrapper
-  [style.max-height]="maxHeight + 'px'"
-  class="overflow-y-auto flex flex-col w-full py-2 flex-grow md:py-3 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-cs-dark-500 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]"
+  class="flex flex-col w-full py-2 flex-grow md:py-3 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-cs-dark-500 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]"
 >
   <textarea
     #textarea
     tabindex="0"
     rows="1"
-    class="m-0 w-full resize-none outline-none border-0 bg-transparent p-0 pr-7 overflow-hidden"
+    [style.max-height]="maxHeight + 'px'"
+    class="m-0 w-full resize-none outline-none border-0 bg-transparent p-0 pr-7 overflow-auto"
     (input)="onTextareaInput(textarea)"
   ></textarea>
   <button

@@ -1,0 +1,9 @@
+:host {
+  ::-webkit-scrollbar-track {
+    background-color: transparent !important;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background-color: transparent !important;
+  }
+}
