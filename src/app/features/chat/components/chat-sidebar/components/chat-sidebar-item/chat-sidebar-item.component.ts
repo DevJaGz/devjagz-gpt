@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { SidebarItemMode } from '@app/features/chat/constants/chat-sidebar-item.constant';
 import { ISidebarItem } from '@app/features/chat/interfaces/chat-sidebar-item.interface';
-import { from } from 'rxjs';
+import { from, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-chat-sidebar-item',
@@ -28,7 +28,7 @@ export class ChatSidebarItemComponent implements OnInit {
 
   readonly modes: typeof SidebarItemMode = SidebarItemMode;
 
-  svgIcon!: any;
+  svgIcon!: Observable<string>;
 
   ngOnInit(): void {
     const { item } = this;
