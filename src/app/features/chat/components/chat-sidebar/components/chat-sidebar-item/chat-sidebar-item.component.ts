@@ -1,6 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 import { SidebarItemMode } from '@app/features/chat/constants/chat-sidebar-item.constant';
 import { ISidebarItem } from '@app/features/chat/interfaces/chat-sidebar-item.interface';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-chat-sidebar-item',
@@ -8,7 +14,7 @@ import { ISidebarItem } from '@app/features/chat/interfaces/chat-sidebar-item.in
   styleUrls: ['./chat-sidebar-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ChatSidebarItemComponent {
+export class ChatSidebarItemComponent implements OnInit {
   @Input()
   currentMode: SidebarItemMode = SidebarItemMode.DEFAULT;
 
@@ -17,8 +23,18 @@ export class ChatSidebarItemComponent {
     label: 'Hola',
     outlined: false,
     routerLink: '',
-    image: 'plus',
+    svgPath: 'assets/images/svg/icons/comment.svg',
   };
 
   readonly modes: typeof SidebarItemMode = SidebarItemMode;
+
+  svgIcon!: any;
+
+  ngOnInit(): void {
+    const { item } = this;
+    if (item) {
+      const svg = fetch(this.item.svgPath).then((response) => response.text());
+      this.svgIcon = from(svg);
+    }
+  }
 }
