@@ -35,6 +35,19 @@ export class ChatSidebarItemComponent implements OnInit {
     return '';
   }
 
+  get isActive(): boolean {
+    const { item, routerLink } = this;
+    if (item && routerLink) {
+      return this.router.isActive(routerLink, {
+        paths: 'exact',
+        queryParams: 'exact',
+        fragment: 'ignored',
+        matrixParams: 'ignored',
+      });
+    }
+    return false;
+  }
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -45,14 +58,5 @@ export class ChatSidebarItemComponent implements OnInit {
       this.svgIcon = from(svg);
       this.routerLink = routerLink;
     }
-  }
-
-  isActive(route: string): boolean {
-    return this.router.isActive(route, {
-      paths: 'exact',
-      queryParams: 'exact',
-      fragment: 'ignored',
-      matrixParams: 'ignored',
-    });
   }
 }

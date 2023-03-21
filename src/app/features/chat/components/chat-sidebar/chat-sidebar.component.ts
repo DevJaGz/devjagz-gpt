@@ -11,12 +11,14 @@ export class ChatSidebarComponent {
   items: ISidebarItem[] = [
     {
       id: '1',
-      label: 'Hola',
+      label:
+        'Hola quiero que escribas un ensayo de 100 palabras teniendo en cuenta',
       svgPath: 'assets/images/svg/icons/comment.svg',
     },
     {
       id: '2',
-      label: 'Hola como va todo',
+      label:
+        'Estoy creando una historia sobre el hombre araña y la mujer maravilla',
       svgPath: 'assets/images/svg/icons/comment.svg',
     },
   ];

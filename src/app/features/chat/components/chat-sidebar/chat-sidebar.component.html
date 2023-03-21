@@ -20,7 +20,9 @@
     >New chat</a
   >
 
-  <div class="flex-col flex-1 overflow-y-auto border-b border-white/20">
+  <div
+    class="flex flex-col flex-1 overflow-y-auto border-b border-white/20 gap-2"
+  >
     <app-chat-sidebar-item
       [item]="item"
       *ngFor="let item of items; trackBy: trackByFn"
