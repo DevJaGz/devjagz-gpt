@@ -1,7 +1,6 @@
 export interface ISidebarItem {
-  id?: string;
+  id: string;
   svgPath: string;
   label: string;
-  outlined: boolean;
-  routerLink: string;
+  outlined?: boolean;
 }

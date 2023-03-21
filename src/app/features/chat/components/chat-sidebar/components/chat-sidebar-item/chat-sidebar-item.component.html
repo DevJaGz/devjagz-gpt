@@ -1,7 +1,7 @@
 <ng-container *ngIf="item">
   <a
-    [routerLink]="item.routerLink"
-    routerLinkActive="active"
+    [routerLink]="routerLink"
+    routerLinkActive="chat-sidebar-item-active"
     class="flex p-3 items-center gap-3 relative rounded-md hover:bg-cs-light dark:hover:bg-cs-dark-800 cursor-pointer break-all group"
     [ngClass]="{
       'dark:border-white/20': item.outlined,
@@ -12,7 +12,7 @@
     <div
       class="flex-1 text-ellipsis max-h-5 overflow-hidden break-all relative"
     >
-      {{ item.label }}
+      {{ label }}
       <div
         class="absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l from-cs-light-800 group-hover:from-cs-light dark:from-cs-dark dark:group-hover:from-cs-dark-800"
       ></div>
@@ -20,7 +20,10 @@
     <div
       class="absolute flex right-1 z-10 text-gray-600 dark:text-gray-300 visible"
     >
-      <ng-container [ngTemplateOutlet]="selectedButtonsTemplate"></ng-container>
+      <ng-container
+        *ngIf="isActive(routerLink)"
+        [ngTemplateOutlet]="selectedButtonsTemplate"
+      ></ng-container>
     </div>
   </a>
 </ng-container>
@@ -57,7 +60,7 @@
 
 <ng-template #SelectedModeTemplate>
   <a
-    class="flex p-3 items-center gap-3 relative rounded-md cursor-pointer break-all pr-14 bg-gray-400 hover:bg-gray-400 dark:bg-cs-dark-700 dark:hover:bg-cs-dark-700 group animate-flash duration-1000"
+    class="flex p-3 items-center gap-3 relative rounded-md cursor-pointer break-all pr-14 bg-gray-400 hover:bg-gray-400 dark:bg-cs-dark-700 dark:hover:bg-cs-dark-700 group"
     ><svg
       stroke="currentColor"
       fill="none"

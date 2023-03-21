@@ -39,6 +39,14 @@
       background-color: theme('colors.cs-dark.500') !important;
     }
   }
+
+  .chat-sidebar-item-active {
+    background-color: theme('colors.gray.400');
+  }
+
+  .dark .chat-sidebar-item-active {
+    background-color: theme('colors.cs-dark.700');
+  }
 }
 
 @layer utilities {

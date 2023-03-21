@@ -4,6 +4,8 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppRouteNames } from '@app/app-routing.module';
 import { SidebarItemMode } from '@app/features/chat/constants/chat-sidebar-item.constant';
 import { ISidebarItem } from '@app/features/chat/interfaces/chat-sidebar-item.interface';
 import { from, Observable } from 'rxjs';
@@ -19,22 +21,38 @@ export class ChatSidebarItemComponent implements OnInit {
   currentMode: SidebarItemMode = SidebarItemMode.DEFAULT;
 
   @Input()
-  item: ISidebarItem = {
-    label: 'Hola',
-    outlined: false,
-    routerLink: '',
-    svgPath: 'assets/images/svg/icons/comment.svg',
-  };
+  item!: ISidebarItem;
 
   readonly modes: typeof SidebarItemMode = SidebarItemMode;
-
   svgIcon!: Observable<string>;
+  routerLink!: string;
+
+  get label(): string {
+    const { item } = this;
+    if (item) {
+      return item.label;
+    }
+    return '';
+  }
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     const { item } = this;
     if (item) {
       const svg = fetch(this.item.svgPath).then((response) => response.text());
+      const routerLink = `/${AppRouteNames.CHAT}/${item.id}`;
       this.svgIcon = from(svg);
+      this.routerLink = routerLink;
     }
+  }
+
+  isActive(route: string): boolean {
+    return this.router.isActive(route, {
+      paths: 'exact',
+      queryParams: 'exact',
+      fragment: 'ignored',
+      matrixParams: 'ignored',
+    });
   }
 }
