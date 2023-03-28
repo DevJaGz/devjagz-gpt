@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChatComponent } from '@app/features/chat/pages/chat/chat.component';
+import { ChatComponent } from '@app/features/chats/pages/chat/chat.component';
 
 const routes: Routes = [
   {
@@ -17,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ChatRoutingModule {}
+export class ChatsRoutingModule {}

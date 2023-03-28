@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '@app/shared/shared.module';
-import { ChatRoutingModule } from './chat-routing.module';
+import { ChatsRoutingModule } from './chats-routing.module';
 import { ChatInputComponent } from './components/chat-input/chat-input.component';
 import { ChatSidebarComponent } from './components/chat-sidebar/chat-sidebar.component';
 import { ChatSidebarItemComponent } from './components/chat-sidebar/components/chat-sidebar-item/chat-sidebar-item.component';
@@ -16,6 +16,6 @@ import { ChatComponent } from './pages/chat/chat.component';
     ChatSidebarComponent,
     ChatSidebarItemComponent,
   ],
-  imports: [CommonModule, ChatRoutingModule, FormsModule, SharedModule],
+  imports: [CommonModule, ChatsRoutingModule, FormsModule, SharedModule],
 })
-export class ChatModule {}
+export class ChatsModule {}

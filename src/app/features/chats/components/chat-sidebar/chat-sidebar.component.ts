@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ISidebarItem } from '@app/features/chat/interfaces/chat-sidebar-item.interface';
+import { ISidebarItem } from '@app/features/chats/interfaces/chat-sidebar-item.interface';
 
 @Component({
   selector: 'app-chat-sidebar',

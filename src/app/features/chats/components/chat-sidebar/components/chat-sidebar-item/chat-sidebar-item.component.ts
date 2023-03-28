@@ -6,8 +6,8 @@ import {
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppRouteNames } from '@app/app-routing.module';
-import { SidebarItemMode } from '@app/features/chat/constants/chat-sidebar-item.constant';
-import { ISidebarItem } from '@app/features/chat/interfaces/chat-sidebar-item.interface';
+import { SidebarItemMode } from '@app/features/chats/constants/chat-sidebar-item.constant';
+import { ISidebarItem } from '@app/features/chats/interfaces/chat-sidebar-item.interface';
 import { from, Observable } from 'rxjs';
 
 @Component({
