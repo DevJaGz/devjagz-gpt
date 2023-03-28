@@ -8,6 +8,7 @@ import { ChatInputComponent } from './components/chat-input/chat-input.component
 import { ChatSidebarComponent } from './components/chat-sidebar/chat-sidebar.component';
 import { ChatSidebarItemComponent } from './components/chat-sidebar/components/chat-sidebar-item/chat-sidebar-item.component';
 import { ChatComponent } from './pages/chat/chat.component';
+import { ChatLandingComponent } from './components/chat-landing/chat-landing.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ChatComponent } from './pages/chat/chat.component';
     ChatInputComponent,
     ChatSidebarComponent,
     ChatSidebarItemComponent,
+    ChatLandingComponent,
   ],
   imports: [CommonModule, ChatsRoutingModule, FormsModule, SharedModule],
 })
