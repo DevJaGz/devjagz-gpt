@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: AppRouteNames.CHAT,
     loadChildren: () =>
-      import('@app/features/chats/chats.module').then((m) => m.ChatsModule),
+      import('@app/features/chats/chat.module').then((m) => m.ChatsModule),
   },
   {
     path: '**',
