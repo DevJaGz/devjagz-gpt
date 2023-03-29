@@ -1,4 +1,4 @@
-import { IChat } from '../../../core/interfaces/chat.interface';
+import { IChat } from './chat.interface';
 
 export interface IChats {
   viewChats(): IChat[];

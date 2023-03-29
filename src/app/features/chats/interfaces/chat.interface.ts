@@ -1,6 +1,7 @@
-import { IMessage } from '../../../core/interfaces/chat.interface';
+import { IMessage } from './message.interface';
 
 export interface IChat {
+  name: string;
   viewMessages(): IMessage[];
   sendMessage(): void;
   editMessage(): void;
