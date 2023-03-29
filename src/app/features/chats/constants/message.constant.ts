@@ -1,6 +1,6 @@
 export enum MessageEmmiter {
-  USER = 'USER',
-  SYSTEM = 'SYSTEM',
+  USER = 'USER', // Who is using the application
+  SYSTEM = 'SYSTEM', // The engine that answers
 }
 
 export enum MessageStatus {
