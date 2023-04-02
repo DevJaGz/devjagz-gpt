@@ -41,7 +41,7 @@ import { MessageService } from './services/message.service';
     },
     {
       provide: ChatRepository,
-      useExisting: ChatListService,
+      useExisting: ChatService,
     },
     {
       provide: MessageRepository,

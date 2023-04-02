@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { ChatFacadeService } from '@app/features/chats/services/facade-chat.service';
 
 @Component({
   selector: 'app-chat-input',
@@ -7,6 +8,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ChatInputComponent {
   @Output() onChatValue = new EventEmitter<string>();
+
+  constructor(private chatService: ChatFacadeService) {}
 
   readonly minHeight = 24;
   readonly maxHeight = 200;
@@ -35,6 +38,8 @@ export class ChatInputComponent {
   private sendValue(textarea: HTMLTextAreaElement): void {
     const { style, value } = textarea;
     this.onChatValue.emit(value);
+    console.log('Sent', value);
+    this.chatService.sendMessage(value);
     textarea.value = '';
     style.height = `${this.minHeight}px`;
     textarea.focus();

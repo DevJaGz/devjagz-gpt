@@ -8,9 +8,9 @@ module.exports = {
     ...defaultTheme,
     colors: {
       ...colors,
-      // sky: colors.lightBlue, // update lightBlue to sky
-      // stone: colors.warmGray, // update warmGray to stone
-      // neutral: colors.trueGray, // update trueGray to neutral
+      sky: colors.lightBlue, // update lightBlue to sky
+      stone: colors.warmGray, // update warmGray to stone
+      neutral: colors.trueGray, // update trueGray to neutral
       "cs-dark": {
         DEFAULT: "#202123",
         800: "#2A2B32",
@@ -40,9 +40,9 @@ module.exports = {
         0: "0",
       },
       neutral: {
-        light: "#f2f2f2", // reemplaza con tu color neutral para el tema claro
-        DEFAULT: "#6B7280", // reemplaza con tu color neutral predeterminado
-        dark: "#1f2937", // reemplaza con tu color neutral para el tema oscuro
+        light: "#f2f2f2",
+        DEFAULT: "#6B7280",
+        dark: "#1f2937",
       },
     },
     extend: {},
