@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChatComponent } from '@app/features/chats/pages/chat/chat.component';
+import { ChatListComponent } from '@app/features/chats/pages/chats-list/chat-list.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ChatComponent,
+    component: ChatListComponent,
   },
   {
     path: ':id',
-    component: ChatComponent,
+    component: ChatListComponent,
   },
 ];
 

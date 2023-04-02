@@ -4,3 +4,5 @@ export interface ISidebarItem {
   label: string;
   outlined?: boolean;
 }
+
+export type SidebarItems = ISidebarItem[];

@@ -1,9 +1,4 @@
+import { Observable } from 'rxjs';
 import { IChat } from './chat.interface';
 
-export interface IChats {
-  viewChats(): IChat[];
-  createChat(): void;
-  editChatName(): void;
-  deleteChat(): void;
-  deleteChats(): void;
-}
+export type Chats = Observable<IChat[]>;

@@ -1,5 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ISidebarItem } from '@app/features/chats/interfaces/chat-sidebar-item.interface';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ISidebarItem,
+  SidebarItems,
+} from '@app/features/chats/interfaces/chat-sidebar-item.interface';
 
 @Component({
   selector: 'app-chat-sidebar',
@@ -8,7 +11,8 @@ import { ISidebarItem } from '@app/features/chats/interfaces/chat-sidebar-item.i
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChatSidebarComponent {
-  items: ISidebarItem[] = [
+  @Input()
+  items: SidebarItems = [
     {
       id: '1',
       label:

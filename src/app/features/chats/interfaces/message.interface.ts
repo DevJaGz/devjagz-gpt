@@ -7,5 +7,4 @@ export interface IMessage {
   sender: MessageEmmiter;
   status: MessageStatus;
   content: string;
-  setStyles?(): void;
 }
